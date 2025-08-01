@@ -84,6 +84,8 @@ jobs:
             #  '[release]', tag as release.
             - name: Tag release
               if: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[release]' ) }}
+              permissions:
+                contents: write
               run: |
                   git tag ${{ steps.version.outputs.MajorMinorCommits }}
                   git push origin ${{ steps.version.outputs.MajorMinorCommits }}
