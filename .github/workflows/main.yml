@@ -84,6 +84,10 @@ jobs:
                   echo "RELEASE_FLAG=--pre-release" >> $GITHUB_ENV
 
 
+
+            # ================================
+            # ================================
+
             #  If is a push, and the commit message does contain the string
             #  '[release]', tag as release.
             - name: Tag release
@@ -91,6 +95,9 @@ jobs:
               run: |
                   git tag ${{ steps.version.outputs.MajorMinorCommits }}
                   git push origin ${{ steps.version.outputs.MajorMinorCommits }}
+
+            # ================================
+            # ================================
 
 
 
