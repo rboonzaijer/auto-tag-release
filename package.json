@@ -1,0 +1,7 @@
+{
+    "name": "auto-tag-release",
+    "displayName": "auto-tag-release",
+    "description": "Testing auto-tag on '[release]' commit",
+    "version": "0.0.0",
+    "license": "MIT"
+}
