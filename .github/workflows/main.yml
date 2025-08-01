@@ -91,6 +91,7 @@ jobs:
                   git push origin ${{ steps.version.outputs.MajorMinorCommits }}
 
 
+
             # - name: Compile and create .vsix
             #   env:
             #       LANGUAGESERVER_CSPROJ_PATH: ./YarnSpinner/YarnSpinner.LanguageServer/YarnLanguageServer.csproj
