@@ -86,7 +86,7 @@ jobs:
               if: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[release]' ) }}
               run: |
                   git tag ${{ steps.version.outputs.MajorMinorCommits }}
-                  git push origin tag ${{ steps.version.outputs.MajorMinorCommits }}
+                  git push origin ${{ steps.version.outputs.MajorMinorCommits }}
 
 
             # - name: Compile and create .vsix
